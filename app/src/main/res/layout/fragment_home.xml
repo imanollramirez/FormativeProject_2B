@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2980B9"
+    tools:context=".ui.home.HomeFragment">
+
+    <ImageView
+        android:id="@+id/imgMainBackground"
+        android:layout_width="338dp"
+        android:layout_height="456dp"
+        android:alpha="0.5"
+        android:src="@drawable/logo"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="143dp"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/lblUserName"
+        android:layout_width="401dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/poppins"
+        android:text="Estimado usuario"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="96dp" />
+
+    <TextView
+        android:id="@+id/lblHomeInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Bienvenid@"
+        android:textColor="#6DD5FA"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="38dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

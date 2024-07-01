@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+
+    android:layout_width="match_parent"
+    android:layout_height="290dp"
+    app:cardBackgroundColor="#6CC0DD"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp"
+
+    app:cardUseCompatPadding="true"
+    app:contentPadding="20dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="344dp"
+        android:layout_height="221dp"
+        app:layout_constraintBottom_toBottomOf="@+id/lblTicketInfo2"
+        app:layout_constraintTop_toBottomOf="@+id/lblTicketInfo2">
+
+        <TextView
+            android:id="@+id/lblPatientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Nombre del paciente"
+            android:textAlignment="center"
+            android:textColor="#2579AF"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnPatientInformation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgPatient" />
+
+        <ImageView
+            android:id="@+id/imgPatient"
+            android:layout_width="146dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/lblPatientName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo_profile" />
+
+        <TextView
+            android:id="@+id/lblPatientInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/poppins"
+            android:text="Ver expediente"
+            android:textAlignment="center"
+            android:textColor="#2579AF"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnPatientInformation" />
+
+        <ImageView
+            android:id="@+id/btnPatientInformation"
+            android:layout_width="35dp"
+            android:layout_height="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/lblPatientInfo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblPatientName"
+            app:srcCompat="@drawable/baseline_patient_information" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,19 @@
+CREATE TABLE TBUsers (
+UUID_Users NVARCHAR2(50) PRIMARY KEY,
+NameUser NVARCHAR2(100),
+Password NVARCHAR2(10)
+);
+
+-- Patients = Pacientes
+CREATE TABLE TBPatients(
+UUID_Patients NVARCHAR2(50) PRIMARY KEY,
+Name NVARCHAR2(50),
+LastName NVARCHAR2(50),
+Age INT NOT NULL,
+Disease NVARCHAR2(100),
+RoomNumber INT NOT NULL,
+BedNumber INT NOT NULL,
+Medication NVARCHAR2(200),
+AddmissionDate NVARCHAR2(10),
+MedicationTime NVARCHAR2(10)
+);
