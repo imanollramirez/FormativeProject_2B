@@ -15,7 +15,7 @@
         android:id="@+id/navigation_patients"
         android:name="imanol.ramirez.myapplication.ui.patients.PatientsFragment"
         android:label="Patients"
-        tools:layout="@layout/fragment_tickets" />
+        tools:layout="@layout/fragment_add_patient" />
 
     <fragment
         android:id="@+id/navigation_profile"

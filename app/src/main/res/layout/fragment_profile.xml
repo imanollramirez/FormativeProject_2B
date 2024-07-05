@@ -10,11 +10,9 @@
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="161dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="59dp"
-        android:layout_marginBottom="400dp"
+        android:layout_height="159dp"
+        android:layout_marginTop="92dp"
         android:src="@drawable/logo_profile"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogOut"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,20 +21,19 @@
         android:id="@+id/txtProfileInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Nombre de Usuario:"
         android:textColor="#6DD5FA"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/lblUserProfile"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <TextView
         android:id="@+id/txtProfileInfo2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Nombre Completo:"
         android:textColor="#6DD5FA"
@@ -44,13 +41,13 @@
         app:layout_constraintBottom_toTopOf="@+id/lblNameProfile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblUserProfile" />
+        app:layout_constraintTop_toBottomOf="@+id/lblUserProfile"
+        app:layout_constraintVertical_bias="0.5" />
 
     <TextView
         android:id="@+id/txtProfileInfo3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="26dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Número de Identificación:"
         android:textColor="#6DD5FA"
@@ -58,13 +55,13 @@
         app:layout_constraintBottom_toTopOf="@+id/lblUUIDprofile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblNameProfile" />
+        app:layout_constraintTop_toBottomOf="@+id/lblNameProfile"
+        app:layout_constraintVertical_bias="0.5" />
 
     <TextView
         android:id="@+id/lblUserProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="41dp"
         android:fontFamily="@font/poppins"
         android:text="Ejemplo de usuario"
         android:textColor="#FFFFFF"
@@ -72,13 +69,13 @@
         app:layout_constraintBottom_toTopOf="@+id/txtProfileInfo2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtProfileInfo" />
+        app:layout_constraintTop_toBottomOf="@+id/txtProfileInfo"
+        app:layout_constraintVertical_bias="0.5" />
 
     <TextView
         android:id="@+id/lblNameProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
         android:fontFamily="@font/poppins"
         android:text="Ejemplo de nombre"
         android:textColor="#FFFFFF"
@@ -86,32 +83,33 @@
         app:layout_constraintBottom_toTopOf="@+id/txtProfileInfo3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtProfileInfo2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtProfileInfo2"
+        app:layout_constraintVertical_bias="0.5" />
 
     <TextView
         android:id="@+id/lblUUIDprofile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins"
-        android:text="123456789"
+        android:text="##########"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/btnLogOut"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtProfileInfo3" />
+        app:layout_constraintTop_toBottomOf="@+id/txtProfileInfo3"
+        app:layout_constraintVertical_bias="0.5" />
 
     <Button
         android:id="@+id/btnLogOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="67dp"
+        android:layout_marginBottom="124dp"
         android:backgroundTint="#6DD5FA"
         android:fontFamily="@font/poppins_bold"
         android:text="Cerrar Sesión"
         android:textColor="#2980B9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

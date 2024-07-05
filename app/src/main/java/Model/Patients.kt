@@ -1,13 +1,14 @@
 package Model
 
 data class Patients(
-    val name: String,
-    val lastName: String,
-    val age: Int,
-    val disease: String,
-    val roomNumber: Int,
-    val bedNumber: Int,
-    val medication: String,
-    val addmissionDate: String,
-    val medicationTime: String
+    val uuid: String,
+    var name: String,
+    var lastName: String,
+    var age: Int,
+    var disease: String,
+    var roomNumber: Int,
+    var bedNumber: Int,
+    var medication: String,
+    var addmissionDate: String,
+    var medicationTime: String
 )

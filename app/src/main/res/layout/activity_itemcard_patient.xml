@@ -38,7 +38,7 @@
         <ImageView
             android:id="@+id/imgPatient"
             android:layout_width="146dp"
-            android:layout_height="0dp"
+            android:layout_height="95dp"
             android:layout_marginTop="3dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/lblPatientName"
@@ -51,26 +51,52 @@
             android:id="@+id/lblPatientInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="77dp"
+            android:layout_marginBottom="14dp"
             android:fontFamily="@font/poppins"
             android:text="Ver expediente"
             android:textAlignment="center"
             android:textColor="#2579AF"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnEdit"
+            app:layout_constraintStart_toEndOf="@+id/btnDelete"
             app:layout_constraintTop_toBottomOf="@+id/btnPatientInformation" />
 
         <ImageView
             android:id="@+id/btnPatientInformation"
             android:layout_width="35dp"
-            android:layout_height="32dp"
+            android:layout_height="0dp"
             app:layout_constraintBottom_toTopOf="@+id/lblPatientInfo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lblPatientName"
             app:srcCompat="@drawable/baseline_patient_information" />
+
+        <ImageView
+            android:id="@+id/btnEdit"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="6dp"
+            android:alpha="0.8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lblPatientInfo"
+            app:srcCompat="@drawable/ic_edit" />
+
+        <ImageView
+            android:id="@+id/btnDelete"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="68dp"
+            android:alpha="0.8"
+            app:layout_constraintBottom_toBottomOf="@+id/btnEdit"
+            app:layout_constraintEnd_toStartOf="@+id/lblPatientInfo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lblPatientInfo"
+            app:srcCompat="@drawable/ic_delete" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

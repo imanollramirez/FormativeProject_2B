@@ -78,7 +78,7 @@ class LoginActivity : AppCompatActivity() {
                     {
                             val objCon = Connection().StringConection()
 
-                            val userData = objCon?.prepareStatement("SELECT Name,UUID_Users FROM Users WHERE Username = ? AND Password = ?")!!
+                            val userData = objCon?.prepareStatement("SELECT Name,UUID_Users FROM TBUsers WHERE Username = ? AND Password = ?")!!
                             userData.setString(1, txtUser.text.toString())
                             userData.setString(2, txtPassword.text.toString())
                             val result = userData.executeQuery()
@@ -86,7 +86,7 @@ class LoginActivity : AppCompatActivity() {
                             if(result.next())
                             {
                                 val intent = Intent(this@LoginActivity, MainActivity::class.java)
-                                //TODO: Global variables
+                                //TODO: Varibles globales para información del usuario
                                 uuidSession = result.getString("UUID_Users")
                                 nameSession = result.getString("Name")
                                 usernameSession = txtUser.text.toString()

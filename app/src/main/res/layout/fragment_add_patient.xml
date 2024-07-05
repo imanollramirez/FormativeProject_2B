@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:alpha="0.8"
+    android:background="@drawable/background_patient"
     tools:context=".ui.patients.PatientsFragment">
 
     <TextView
@@ -12,136 +14,186 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_bold"
-        android:text="Gestión de tickets"
-        android:textColor="#343434"
+        android:text="Gestión de Pacientes"
+        android:textColor="#2980B9"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtTicketsInfo2"
+        app:layout_constraintBottom_toTopOf="@+id/txtPatientsInfo2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtTicketsInfo2"
+        android:id="@+id/txtPatientsInfo2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="51dp"
         android:fontFamily="@font/poppins"
         android:text="Complete los campos"
+        android:textColor="#000000"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtAuthor"
+        app:layout_constraintBottom_toTopOf="@+id/txtLastName"
         app:layout_constraintStart_toStartOf="@+id/txtEditTicket"
         app:layout_constraintTop_toBottomOf="@+id/txtEditTicket" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcvTickets"
-        android:layout_width="414dp"
-        android:layout_height="413dp"
-        android:layout_marginHorizontal="0dp"
-        android:layout_marginVertical="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAddTicket"
-        app:layout_constraintVertical_bias="0.23" />
 
     <EditText
-        android:id="@+id/txtDescription"
-        android:layout_width="255dp"
-        android:layout_height="88dp"
-        android:layout_marginStart="69dp"
-        android:layout_marginEnd="69dp"
-        android:layout_marginBottom="8dp"
+        android:id="@+id/txtAddmissionDate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="15dp"
         android:ems="10"
         android:fontFamily="@font/poppins"
-        android:gravity="start|top"
-        android:hint="Descripción"
-        android:inputType="textMultiLine"
+        android:hint="Fecha de Ingreso"
+        android:inputType="text"
+        android:textColor="#343434"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtMedicationTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtDisease"
+        app:layout_constraintTop_toBottomOf="@+id/txtLastName" />
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="19dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="Nombres"
+        android:inputType="text"
+        android:textColor="#343434"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtLastName"
+        app:layout_constraintEnd_toStartOf="@+id/txtLastName"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtLastName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="Apellidos"
+        android:inputType="text"
+        android:textColor="#343434"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtAddmissionDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtName"
+        app:layout_constraintTop_toBottomOf="@+id/txtPatientsInfo2" />
+
+    <EditText
+        android:id="@+id/txtMedication"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="19dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="Medicamentos"
+        android:inputType="text"
+        android:textColor="#343434"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtMedicationTime"
+        app:layout_constraintEnd_toStartOf="@+id/txtMedicationTime"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtMedicationTime"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="26dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="Hora de medicamentos"
+        android:inputType="text"
+        android:textColor="#343434"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtBedNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtMedication"
+        app:layout_constraintTop_toBottomOf="@+id/txtAddmissionDate" />
+
+    <EditText
+        android:id="@+id/txtDisease"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="19dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="Enfermedad"
+        android:inputType="text"
+        android:textColor="#343434"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtAddmissionDate"
+        app:layout_constraintEnd_toStartOf="@+id/txtAddmissionDate"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtRoomNumber"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="19dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="N# de habitación"
+        android:inputType="number"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtBedNumber"
+        app:layout_constraintEnd_toStartOf="@+id/txtBedNumber"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtAge"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="136dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="Edad"
+        android:inputType="number"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/btnAddTicket"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFinishDate" />
+        app:layout_constraintTop_toBottomOf="@+id/txtBedNumber" />
 
     <EditText
-        android:id="@+id/txtAuthorsEmail"
+        android:id="@+id/txtBedNumber"
         android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="11dp"
-        android:layout_marginEnd="12dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="21dp"
         android:ems="10"
         android:fontFamily="@font/poppins"
-        android:hint="Correo del autor"
-        android:inputType="text"
-        android:textColor="#343434"
+        android:hint="N# de Cama"
+        android:inputType="number"
         android:textSize="16sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/txtFinishDate"
-        app:layout_constraintEnd_toStartOf="@+id/txtFinishDate"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/txtAuthor"
-        android:layout_width="188dp"
-        android:layout_height="46dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="20dp"
-        android:ems="10"
-        android:fontFamily="@font/poppins"
-        android:hint="Autor"
-        android:inputType="text"
-        android:textColor="#343434"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtFinishDate"
+        app:layout_constraintBottom_toTopOf="@+id/txtAge"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txtTitle"
-        app:layout_constraintTop_toBottomOf="@+id/txtTicketsInfo2" />
-
-    <EditText
-        android:id="@+id/txtTitle"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="11dp"
-        android:layout_marginEnd="12dp"
-        android:ems="10"
-        android:fontFamily="@font/poppins"
-        android:hint="Título"
-        android:inputType="text"
-        android:textColor="#343434"
-        android:textSize="16sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/txtAuthor"
-        app:layout_constraintEnd_toStartOf="@+id/txtAuthor"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/txtFinishDate"
-        android:layout_width="185dp"
-        android:layout_height="42dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
-        android:ems="10"
-        android:fontFamily="@font/poppins"
-        android:hint="Fecha de Finalización"
-        android:inputType="date"
-        android:textColor="#343434"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtDescription"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txtAuthorsEmail"
-        app:layout_constraintTop_toBottomOf="@+id/txtAuthor" />
+        app:layout_constraintStart_toEndOf="@+id/txtRoomNumber"
+        app:layout_constraintTop_toBottomOf="@+id/txtMedicationTime" />
 
     <Button
         android:id="@+id/btnAddTicket"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#343434"
+        android:layout_marginBottom="108dp"
+        android:backgroundTint="#2980B9"
         android:fontFamily="@font/poppins_bold"
         android:text="Agregar"
+        android:textColor="#6DD5FA"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDescription" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

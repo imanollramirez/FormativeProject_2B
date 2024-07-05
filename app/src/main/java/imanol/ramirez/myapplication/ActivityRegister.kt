@@ -86,7 +86,7 @@ import java.util.UUID
                         GlobalScope.launch (Dispatchers.IO) {
                             val objCon = Connection().StringConection()
 
-                            val userData = objCon?.prepareStatement("INSERT INTO Users VALUES(?, ? , ?, ?)")!!
+                            val userData = objCon?.prepareStatement("INSERT INTO TBUsers VALUES(?, ? , ?, ?)")!!
                             userData.setString(1, UUID.randomUUID().toString())
                             userData.setString(2, txtName.text.toString())
                             userData.setString(3, txtUsername.text.toString())
