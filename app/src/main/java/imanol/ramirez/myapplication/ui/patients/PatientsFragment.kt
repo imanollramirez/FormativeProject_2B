@@ -13,6 +13,8 @@ class PatientsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_add_patient, container, false)
+        val root = inflater.inflate(R.layout.fragment_add_patient, container, false)
+        
+        return root
     }
 }
