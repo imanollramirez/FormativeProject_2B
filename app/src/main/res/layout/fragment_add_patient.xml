@@ -183,7 +183,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtMedicationTime" />
 
     <Button
-        android:id="@+id/btnAddTicket"
+        android:id="@+id/btnAddPatient"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="108dp"

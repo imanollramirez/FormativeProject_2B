@@ -70,20 +70,20 @@ class Adapter(private var Data: List<Patients>) : RecyclerView.Adapter<ViewHolde
         GlobalScope.launch(Dispatchers.IO) {
             val objCon = Connection().StringConection()
 
-            val updateTicket =
+            val updatePatiente =
                 objCon?.prepareStatement("UPDATE TBPatients SET Name= ?,  LastName = ?, Age = ?, Disease = ?, RoomNumber = ?, BedNumber = ?, Medication = ?, AddmissionDate = ?, MedicationDate = ?   WHERE UUID_Patients = ?")!!
-            updateTicket.setString(1, Nombre)
-            updateTicket.setString(2, Apellido)
-            updateTicket.setString(3, Edad.toString())
-            updateTicket.setString(4, Enfermedad)
-            updateTicket.setString(5, NumCuarto.toString())
-            updateTicket.setString(6, NumCama.toString())
-            updateTicket.setString(7, Medicamentos)
-            updateTicket.setString(8, AddmissionDate)
-            updateTicket.setString(9, TiempoDeMedicamentos)
-            updateTicket.setString(10, UUID)
+            updatePatiente.setString(1, Nombre)
+            updatePatiente.setString(2, Apellido)
+            updatePatiente.setString(3, Edad.toString())
+            updatePatiente.setString(4, Enfermedad)
+            updatePatiente.setString(5, NumCuarto.toString())
+            updatePatiente.setString(6, NumCama.toString())
+            updatePatiente.setString(7, Medicamentos)
+            updatePatiente.setString(8, AddmissionDate)
+            updatePatiente.setString(9, TiempoDeMedicamentos)
+            updatePatiente.setString(10, UUID)
 
-            updateTicket.executeUpdate()
+            updatePatiente.executeUpdate()
 
             withContext(Dispatchers.Main){
                 ActualizarPantalla(
