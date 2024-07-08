@@ -39,15 +39,15 @@ class HomeFragment : Fragment() {
 
             while (resulSet.next()) {
                 val uuid = resulSet.getString("UUID_Patients")
-                val name = resulSet.getString("Name ")
+                val name = resulSet.getString("Name")
                 val lastName = resulSet.getString("LastName")
                 val Age = resulSet.getInt("Age")
                 val Disease = resulSet.getString("Disease")
-                val Medication = resulSet.getString("Medication")
-                val AdmmissioDate = resulSet.getString("AdmmissionDate")
-                val MedicationtTime = resulSet.getString("MedicationTime")
                 val RoomNumber = resulSet.getInt("RoomNumber")
                 val BedNumber = resulSet.getInt("BedNumber")
+                val Medication = resulSet.getString("Medication")
+                val AdmmissioDate = resulSet.getString("AddmissionDate")
+                val MedicationtTime = resulSet.getString("MedicationTime")
 
                 val values = Patients(uuid, name, lastName, Age, Disease, RoomNumber,BedNumber,Medication,AdmmissioDate,MedicationtTime)
                 listPatients.add(values)

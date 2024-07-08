@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import kotlinx.coroutines.withContext
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -56,12 +57,6 @@ class LoginActivity : AppCompatActivity() {
         }
 
         btnLogin.setOnClickListener{
-
-            fun clear()
-            {
-                txtPassword.setText("")
-                txtUser.setText("")
-            }
            GlobalScope.launch (Dispatchers.IO ) {
                 try
                 {
@@ -78,7 +73,7 @@ class LoginActivity : AppCompatActivity() {
                     {
                             val objCon = Connection().StringConection()
 
-                            val userData = objCon?.prepareStatement("SELECT Name,UUID_Users FROM TBUsers WHERE UserName = ? AND Password = ?")!!
+                            val userData = objCon?.prepareStatement("SELECT Name,UUID_Users FROM TBUsers WHERE NameUser = ? AND Password = ?")!!
                             userData.setString(1, txtUser.text.toString())
                             userData.setString(2, txtPassword.text.toString())
                             val result = userData.executeQuery()
@@ -91,7 +86,6 @@ class LoginActivity : AppCompatActivity() {
                                 nameSession = result.getString("Name")
                                 usernameSession = txtUser.text.toString()
                                 startActivity(intent)
-                                clear()
 
                             }
                             else
@@ -112,6 +106,15 @@ class LoginActivity : AppCompatActivity() {
            }
 
        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        val txtU = findViewById<EditText>(R.id.txtUser)
+        val txtP = findViewById<EditText>(R.id.txtPassword)
+
+        txtP.setText("")
+        txtU.setText("")
     }
 
 }

@@ -117,7 +117,7 @@ class PatientsFragment : Fragment() {
                         {
                             withContext(Dispatchers.Main)
                             {
-                                Toast.makeText(this@PatientsFragment.context, "La fecha de finalización es inválida", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(this@PatientsFragment.context, "La fecha de admisión es inválida", Toast.LENGTH_SHORT).show()
                                 validation = false
                             }
                         }

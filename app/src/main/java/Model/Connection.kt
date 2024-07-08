@@ -8,9 +8,9 @@ class Connection {
     fun StringConection(): Connection?
     {
         try {
-            val ip = "jdbc:oracle:thin:@192.168.1.10:1521:xe"
+            val ip = "jdbc:oracle:thin:@ 192.168.56.1:1521:xe"
             val user = "system"
-            val password = "godislove"
+            val password = "ITR2024"
 
             val strConnection = DriverManager.getConnection(ip,user,password)
             return  strConnection
