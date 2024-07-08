@@ -39,7 +39,7 @@ class PatientsFragment : Fragment() {
         val txtMedicationTime = root.findViewById<EditText>(R.id.txtMedicationTime)
         val txtRoomNumber = root.findViewById<EditText>(R.id.txtRoomNumber)
         val txtBedNumber = root.findViewById<EditText>(R.id.txtBedNumber)
-        val btnAddPatient = root.findViewById<Button>(R.id.btnAddTicket)
+        val btnAddPatient = root.findViewById<Button>(R.id.btnAddPatient)
 
 
         fun clear()
@@ -153,18 +153,20 @@ class PatientsFragment : Fragment() {
                             val objCon = Connection().StringConection()
 
                             val addPatient =
-                                objCon?.prepareStatement("INSERT INTO TBPatients UUID_Patients = ?, Name = ?, LastName = ?, Age = ?, Disease = ?, RoomNumber = ?, BedNumber = ?, Medication = ?, AddmissionDate = ?, MedicationTime = ?")!!
+                                objCon?.prepareStatement("INSERT INTO TBPatients (UUID_Patients, Name, LastName, Age, Disease, RoomNumber, BedNumber, Medication, AddmissionDate, MedicationTime) VALUES (?, ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?)")!!
 
                             addPatient.setString(1, UUID.randomUUID().toString())
                             addPatient.setString(2, txtName.text.toString())
                             addPatient.setString(3, txtLastName.text.toString())
                             addPatient.setString(4, txtAge.text.toString())
                             addPatient.setString(5,  txtDisease.text.toString())
-                            addPatient.setString(6, txtRoomNumber.toString())
-                            addPatient.setString(7, txtBedNumber.toString())
+                            addPatient.setString(6, txtRoomNumber.text.toString())
+                            addPatient.setString(7, txtBedNumber.text.toString())
                             addPatient.setString(8, txtMedication.text.toString())
                             addPatient.setString(9, txtAdmmissionDate.text.toString())
                             addPatient.setString(10, txtMedicationTime.text.toString())
+
+                            addPatient.executeUpdate()
 
                             withContext(Dispatchers.Main) {
                                 Toast.makeText(

@@ -155,14 +155,14 @@
         android:id="@+id/txtAge"
         android:layout_width="50dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="136dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:fontFamily="@font/poppins"
         android:hint="Edad"
         android:inputType="number"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnAddTicket"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtBedNumber" />
 
@@ -193,7 +193,9 @@
         android:textColor="#6DD5FA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAge"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

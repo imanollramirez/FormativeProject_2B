@@ -78,7 +78,7 @@ class LoginActivity : AppCompatActivity() {
                     {
                             val objCon = Connection().StringConection()
 
-                            val userData = objCon?.prepareStatement("SELECT Name,UUID_Users FROM TBUsers WHERE NameUser = ? AND Password = ?")!!
+                            val userData = objCon?.prepareStatement("SELECT Name,UUID_Users FROM TBUsers WHERE UserName = ? AND Password = ?")!!
                             userData.setString(1, txtUser.text.toString())
                             userData.setString(2, txtPassword.text.toString())
                             val result = userData.executeQuery()
