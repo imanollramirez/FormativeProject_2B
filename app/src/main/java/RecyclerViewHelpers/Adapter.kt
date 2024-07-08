@@ -108,7 +108,7 @@ class Adapter(private var Data: List<Patients>) : RecyclerView.Adapter<ViewHolde
             GlobalScope.launch(Dispatchers.IO) {
                 val objCon = Connection().StringConection()
 
-                val borrarPaciente = objCon?.prepareStatement("DELETE FROM TBpatient WHERE Nombre = ?")!!
+                val borrarPaciente = objCon?.prepareStatement("DELETE FROM TBPatients WHERE Name = ?")!!
                 borrarPaciente.setString(1, Nombre)
                 borrarPaciente.executeUpdate()
 
@@ -158,30 +158,30 @@ class Adapter(private var Data: List<Patients>) : RecyclerView.Adapter<ViewHolde
 
                 val txt1 = EditText(context)
                 layout.addView(txt1)
-                txt1.setHint(patient.name)
+                txt1.setText(patient.name)
                 val txt2 = EditText(context)
                 layout.addView(txt2)
-                txt2.setHint(patient.lastName)
+                txt2.setText(patient.lastName)
                 val txt3 = EditText(context)
                 layout.addView(txt3)
-                txt3.setHint(patient.age)
+                txt3.setText(patient.age.toString())
                 val txt4 = EditText(context)
                 layout.addView(txt4)
-                txt4.setHint(patient.disease)
+                txt4.setText(patient.disease)
                 val txt5 = EditText(context)
-                txt5.setHint(patient.roomNumber)
+                txt5.setText(patient.roomNumber.toString())
                 layout.addView(txt5)
-                val txt6 = EditText(context)
-                txt6.setHint(patient.bedNumber)
+                val txt6 = EditText(context);
+                txt6.setText(patient.bedNumber.toString())
                 layout.addView(txt6)
                 val txt7 = EditText(context)
-                txt7.setHint(patient.medication)
+                txt7.setText(patient.medication)
                 layout.addView(txt7)
                 val txt8 = EditText(context)
-                txt8.setHint(patient.addmissionDate)
+                txt8.setText(patient.addmissionDate)
                 layout.addView(txt8)
                 val txt9 = EditText(context)
-                txt9.setHint(patient.medicationTime)
+                txt9.setText(patient.medicationTime)
                 layout.addView(txt9)
 
                 val uuid = patient.uuid

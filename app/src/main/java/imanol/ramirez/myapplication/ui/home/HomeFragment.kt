@@ -68,7 +68,6 @@ class HomeFragment : Fragment() {
                 rcvPatients.adapter = adapter
             }
         }
-
         return root
     }
 }

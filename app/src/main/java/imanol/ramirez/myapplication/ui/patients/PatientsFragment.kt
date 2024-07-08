@@ -175,7 +175,6 @@ class PatientsFragment : Fragment() {
                                     Toast.LENGTH_SHORT
                                 ).show()
                             }
-
                             clear()
                         }
                     }
