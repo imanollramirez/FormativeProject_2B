@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2980B9"
+    tools:context=".Expediente">
+
+    <TextView
+        android:id="@+id/lblExpedienteInfo7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Medicamentos"
+        android:textColor="#6DD5FA"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/lblExpedienteInfo13"
+        app:layout_constraintStart_toStartOf="@+id/lblExpedienteInfo13" />
+
+    <TextView
+        android:id="@+id/lblExpedienteInfo5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="N# de Cuarto"
+        android:textColor="#6DD5FA"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/lblExpedienteCama"
+        tools:layout_editor_absoluteY="339dp" />
+
+    <TextView
+        android:id="@+id/lblExpedienteInfo8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Hora de los medicamentos"
+        android:textColor="#6DD5FA"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/lblExpedienteHoraMedicamentos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lblExpedienteUUID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins"
+        android:text="##########"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblExpedienteInfo" />
+
+    <TextView
+        android:id="@+id/lblExpedienteInfo6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="N# de Cama"
+        android:textColor="#6DD5FA"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/lblExpedienteCama"
+        tools:layout_editor_absoluteY="410dp" />
+
+    <TextView
+        android:id="@+id/lblExpedienteCama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/poppins"
+        android:text="##########"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/lblExpedienteInfo7"
+        app:layout_constraintStart_toStartOf="@+id/lblExpedienteInfo7" />
+
+    <TextView
+        android:id="@+id/lblExpedienteInfo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Nombres"
+        android:textColor="#6DD5FA"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/lblExpedienteEdad"
+        app:layout_constraintTop_toBottomOf="@+id/lblExpedienteEdad" />
+
+    <TextView
+        android:id="@+id/lblExpedienteNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppins"
+        android:text="##########"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/lblExpedienteEdad"
+        app:layout_constraintTop_toBottomOf="@+id/lblExpedienteInfo2" />
+
+    <TextView
+        android:id="@+id/lblExpedienteInfo13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Fecha de Admisión"
+        android:textColor="#6DD5FA"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/lblExpedienteAdmision"
+        app:layout_constraintStart_toStartOf="@+id/lblExpedienteInfo8" />
+
+    <TextView
+        android:id="@+id/lblExpedienteApellidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins"
+        android:text="##########"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/lblExpedienteNombre"
+        app:layout_constraintTop_toBottomOf="@+id/lblExpedienteNombre" />
+
+    <TextView
+        android:id="@+id/lblExpedienteInfo3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Edad"
+        android:textColor="#6DD5FA"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/lblExpedienteEdad"
+        app:layout_constraintTop_toBottomOf="@+id/lblExpedienteUUID" />
+
+    <TextView
+        android:id="@+id/lblExpedienteEdad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins"
+        android:text="##########"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/lblExpedienteUUID"
+        app:layout_constraintTop_toBottomOf="@+id/lblExpedienteInfo3" />
+
+    <TextView
+        android:id="@+id/lblExpedienteInfo4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Enfermedad"
+        android:textColor="#6DD5FA"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/lblExpedienteEnfermedad"
+        app:layout_constraintStart_toStartOf="@+id/lblExpedienteEnfermedad" />
+
+    <TextView
+        android:id="@+id/lblExpedienteEnfermedad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/poppins"
+        android:text="##########"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/lblExpedienteInfo5"
+        app:layout_constraintStart_toStartOf="@+id/lblExpedienteInfo5" />
+
+    <TextView
+        android:id="@+id/lblExpedienteHoraMedicamentos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/poppins"
+        android:text="##########"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lblExpedienteMedicamentos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins"
+        android:text="##########"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/lblExpedienteInfo7"
+        app:layout_constraintTop_toBottomOf="@+id/lblExpedienteInfo7" />
+
+    <TextView
+        android:id="@+id/lblExpedienteInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="ID"
+        android:textColor="#6DD5FA"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblExpedienteCuarto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/poppins"
+        android:text="##########"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/lblExpedienteInfo5"
+        app:layout_constraintTop_toTopOf="@+id/lblExpedienteInfo5" />
+
+    <TextView
+        android:id="@+id/lblExpedienteAdmision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/poppins"
+        android:text="##########"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/lblExpedienteInfo8"
+        app:layout_constraintEnd_toEndOf="@+id/lblExpedienteInfo13" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

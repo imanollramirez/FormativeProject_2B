@@ -3,13 +3,16 @@ package RecyclerViewHelper
 import Model.Connection
 import Model.Patients
 import android.app.AlertDialog
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import imanol.ramirez.myapplication.R
+import imanol.ramirez.myapplication.fragment_expediente
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -71,7 +74,7 @@ class Adapter(private var Data: List<Patients>) : RecyclerView.Adapter<ViewHolde
             val objCon = Connection().StringConection()
 
             val updatePatiente =
-                objCon?.prepareStatement("UPDATE TBPatients SET Name= ?,  LastName = ?, Age = ?, Disease = ?, RoomNumber = ?, BedNumber = ?, Medication = ?, AddmissionDate = ?, MedicationDate = ?   WHERE UUID_Patients = ?")!!
+                objCon?.prepareStatement("UPDATE TBPatients SET Name= ?,  LastName = ?, Age = ?, Disease = ?, RoomNumber = ?, BedNumber = ?, Medication = ?, AddmissionDate = ?, MedicationTime = ?   WHERE UUID_Patients = ?")!!
             updatePatiente.setString(1, Nombre)
             updatePatiente.setString(2, Apellido)
             updatePatiente.setString(3, Edad.toString())
@@ -204,6 +207,27 @@ class Adapter(private var Data: List<Patients>) : RecyclerView.Adapter<ViewHolde
 
                 val dialog = builder.create()
                 dialog.show()
+            }
+
+            holder.btnVerInformacion.setOnClickListener{
+
+                    val context = holder.itemView.context
+
+                    val Expediente = Intent(context,fragment_expediente::class.java)
+                    Expediente.putExtra("UUID_Patients", patient.uuid)
+                    Expediente.putExtra("Name", patient.name)
+                    Expediente.putExtra("LastName", patient.lastName)
+                    Expediente.putExtra("Age", patient.age)
+                    Expediente.putExtra("Disease", patient.disease)
+                    Expediente.putExtra("RoomNumber", patient.roomNumber)
+                    Expediente.putExtra("BedNUmber", patient.bedNumber)
+                    Expediente.putExtra("Medication", patient.medication)
+                    Expediente.putExtra("AddmissionDate", patient.addmissionDate)
+                    Expediente.putExtra("MedicationTime", patient.medicationTime)
+
+                    context.startActivity(Expediente)
+
+
             }
         }
 }
