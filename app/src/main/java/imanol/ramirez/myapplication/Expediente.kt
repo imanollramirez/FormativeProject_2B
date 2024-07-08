@@ -28,5 +28,17 @@ class Expediente : AppCompatActivity() {
         val lblMedicamentos = findViewById<TextView>(R.id.lblExpedienteMedicamentos)
         val lblAdmision = findViewById<TextView>(R.id.lblExpedienteAdmision)
         val lblHoraMedicamentos = findViewById<TextView>(R.id.lblExpedienteHoraMedicamentos)
+
+        lblUUID.text = intent.getStringExtra("UUID_Patients")
+        lblNombre.text = intent.getStringExtra("Name")
+        lblApellidos.text = intent.getStringExtra("LastName")
+        lblEdad.text = intent.getStringExtra("Age").toString()
+        lblEnfermedad.text = intent.getStringExtra("Disease")
+        lblCuarto.text = intent.getStringExtra("RoomNumber").toString()
+        lblCama.text = intent.getStringExtra("BedNumber").toString()
+        lblMedicamentos.text = intent.getStringExtra("Medication")
+        lblAdmision.text = intent.getStringExtra("AddmissionDate")
+        lblHoraMedicamentos.text = intent.getStringExtra("MedicationTime")
+
     }
 }

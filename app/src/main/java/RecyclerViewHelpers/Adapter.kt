@@ -11,8 +11,8 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import imanol.ramirez.myapplication.Expediente
 import imanol.ramirez.myapplication.R
-import imanol.ramirez.myapplication.fragment_expediente
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -213,7 +213,7 @@ class Adapter(private var Data: List<Patients>) : RecyclerView.Adapter<ViewHolde
 
                     val context = holder.itemView.context
 
-                    val Expediente = Intent(context,fragment_expediente::class.java)
+                    val Expediente = Intent(context,Expediente::class.java)
                     Expediente.putExtra("UUID_Patients", patient.uuid)
                     Expediente.putExtra("Name", patient.name)
                     Expediente.putExtra("LastName", patient.lastName)
