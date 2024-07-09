@@ -8,6 +8,7 @@
     android:background="@drawable/background_patient"
     tools:context=".ui.patients.PatientsFragment">
 
+
     <TextView
         android:id="@+id/txtEditTicket"
         android:layout_width="wrap_content"
@@ -26,8 +27,8 @@
         android:id="@+id/txtPatientsInfo2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginBottom="51dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginBottom="42dp"
         android:fontFamily="@font/poppins"
         android:text="Complete los campos"
         android:textColor="#000000"
@@ -36,13 +37,12 @@
         app:layout_constraintStart_toStartOf="@+id/txtEditTicket"
         app:layout_constraintTop_toBottomOf="@+id/txtEditTicket" />
 
-
     <EditText
         android:id="@+id/txtAddmissionDate"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:fontFamily="@font/poppins"
         android:hint="Fecha de Ingreso"
@@ -58,24 +58,27 @@
         android:id="@+id/txtName"
         android:layout_width="0dp"
         android:layout_height="45dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="71dp"
         android:layout_marginEnd="19dp"
+        android:layout_marginBottom="71dp"
         android:ems="10"
         android:fontFamily="@font/poppins"
         android:hint="Nombres"
         android:inputType="text"
         android:textColor="#343434"
         android:textSize="16sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/txtLastName"
+        app:layout_constraintBottom_toBottomOf="@+id/txtAddmissionDate"
         app:layout_constraintEnd_toStartOf="@+id/txtLastName"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtPatientsInfo2" />
 
     <EditText
         android:id="@+id/txtLastName"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="24dp"
         android:ems="10"
         android:fontFamily="@font/poppins"
         android:hint="Apellidos"
@@ -91,24 +94,27 @@
         android:id="@+id/txtMedication"
         android:layout_width="0dp"
         android:layout_height="45dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="19dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:fontFamily="@font/poppins"
         android:hint="Medicamentos"
         android:inputType="text"
         android:textColor="#343434"
         android:textSize="16sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/txtMedicationTime"
+        app:layout_constraintBottom_toTopOf="@+id/txtRoomNumber"
         app:layout_constraintEnd_toStartOf="@+id/txtMedicationTime"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAddmissionDate" />
 
     <EditText
         android:id="@+id/txtMedicationTime"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:fontFamily="@font/poppins"
         android:hint="Hora de medicamentos"
@@ -124,7 +130,7 @@
         android:id="@+id/txtDisease"
         android:layout_width="0dp"
         android:layout_height="45dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="19dp"
         android:layout_marginEnd="19dp"
         android:ems="10"
         android:fontFamily="@font/poppins"
@@ -139,30 +145,31 @@
     <EditText
         android:id="@+id/txtRoomNumber"
         android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="51dp"
-        android:layout_marginEnd="19dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="21dp"
         android:ems="10"
         android:fontFamily="@font/poppins"
         android:hint="N# de habitación"
         android:inputType="number"
         android:textSize="16sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/txtBedNumber"
+        app:layout_constraintBottom_toBottomOf="@+id/txtBedNumber"
         app:layout_constraintEnd_toStartOf="@+id/txtBedNumber"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtBedNumber" />
 
     <EditText
         android:id="@+id/txtAge"
-        android:layout_width="50dp"
+        android:layout_width="48dp"
         android:layout_height="0dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="108dp"
         android:ems="10"
         android:fontFamily="@font/poppins"
         android:hint="Edad"
         android:inputType="number"
         android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddPatient"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtBedNumber" />
 
@@ -170,8 +177,8 @@
         android:id="@+id/txtBedNumber"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="51dp"
-        android:layout_marginBottom="21dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="48dp"
         android:ems="10"
         android:fontFamily="@font/poppins"
         android:hint="N# de Cama"
@@ -194,8 +201,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtAge"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/txtAge" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

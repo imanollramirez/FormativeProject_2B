@@ -122,6 +122,15 @@ class PatientsFragment : Fragment() {
                             }
                         }
 
+                        if(txtMedicationTime.text.matches(Regex("[0-9]{1,2}:[0-9]{2}"))){}
+                        else{
+                            withContext(Dispatchers.Main)
+                            {
+                                Toast.makeText(this@PatientsFragment.context, "La hora de la medicina es inválida", Toast.LENGTH_SHORT).show()
+                                validation = false
+                            }
+                        }
+
                         if (txtAge.text.contains("[a-zA-Z]".toRegex())) {
                             withContext(Dispatchers.Main)
                             {

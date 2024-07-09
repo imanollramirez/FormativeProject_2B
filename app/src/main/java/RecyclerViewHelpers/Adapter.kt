@@ -220,7 +220,7 @@ class Adapter(private var Data: List<Patients>) : RecyclerView.Adapter<ViewHolde
                     Expediente.putExtra("Age", patient.age)
                     Expediente.putExtra("Disease", patient.disease)
                     Expediente.putExtra("RoomNumber", patient.roomNumber)
-                    Expediente.putExtra("BedNUmber", patient.bedNumber)
+                    Expediente.putExtra("BedNumber", patient.bedNumber)
                     Expediente.putExtra("Medication", patient.medication)
                     Expediente.putExtra("AddmissionDate", patient.addmissionDate)
                     Expediente.putExtra("MedicationTime", patient.medicationTime)

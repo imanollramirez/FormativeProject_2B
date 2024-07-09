@@ -220,8 +220,10 @@
         android:text="##########"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/lblExpedienteInfo3"
-        tools:layout_editor_absoluteX="141dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblExpedienteInfo3" />
 
     <TextView
         android:id="@+id/lblExpedienteInfo3"

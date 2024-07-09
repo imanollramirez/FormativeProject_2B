@@ -9,19 +9,17 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvPatients"
-        android:layout_width="409dp"
-        android:layout_height="633dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="401dp"
+        android:layout_height="548dp"
+        android:layout_marginBottom="92dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/lblUserName"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="30dp"
-        android:layout_marginBottom="8dp"
         android:fontFamily="@font/poppins"
         android:text="Estimado usuario"
         android:textAlignment="center"
@@ -29,35 +27,39 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/rcvPatients"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/lblHomeInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="262dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Bienvenid@"
+        android:textAlignment="center"
         android:textColor="#6DD5FA"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/lblUserName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imgMainBackground"
-        android:layout_width="286dp"
-        android:layout_height="240dp"
-        android:alpha="0.1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginBottom="204dp"
+        android:alpha="0.3"
         android:src="@drawable/logo"
-        app:layout_constraintBottom_toTopOf="@+id/rcvPatients"
-        app:layout_constraintEnd_toStartOf="@+id/rcvPatients"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/rcvPatients"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rcvPatients"
-        app:layout_constraintVertical_bias="0.5"
         tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
